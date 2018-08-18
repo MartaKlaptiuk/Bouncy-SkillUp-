@@ -1,0 +1,265 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: 'Big John';
+  src: url('../fonts/BigJohn/BigJohn.eot'); 
+  src: url('../fonts/BigJohn/BigJohn.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/BigJohn/BigJohn.woff2') format('woff2'), 
+       url('../fonts/BigJohn/BigJohn.woff') format('woff'), 
+       url('../fonts/BigJohn/BigJohn.ttf')  format('truetype'), 
+       url('../fonts/BigJohn/BigJohn.svg#svgFontName') format('svg'); 
+}
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url('../fonts/SourceSansPro-Light/SourceSansPro-Light.eot'); 
+  src: url('../fonts/SourceSansPro-Light/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/SourceSansPro-Light/SourceSansPro-Light.woff2') format('woff2'), 
+       url('../fonts/SourceSansPro-Light/SourceSansPro-Light.woff') format('woff'), 
+       url('../fonts/SourceSansPro-Light/SourceSansPro-Light.ttf')  format('truetype'), 
+       url('../fonts/SourceSansPro-Light/SourceSansPro-Light.svg#svgFontName') format('svg'); 
+}
+// variables
+$brand-color-white: #fff;
+$brand-color-grey: #81868e;
+$brand-background-grey: #f3f3f3;
+$SourceSansPro: 'SourceSansPro-Light';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body {
+	font-family: Open Sans;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+i {
+	color: white;
+	font-size: 2em;
+}
+h1,
+h2,
+h3 {
+	font-weight: normal;
+}
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;;
+  background-image: url("../img/bg.jpg");
+//   background: linear-gradient(top, #000, #255);
+//   background: -webkit-gradient(linear, 0 0, 0 50%, from(#000), to(#255));
+// background: -webkit-linear-gradient(top, #000, #255);
+  background-repeat: no-repeat;
+  background-position: 50% 65% ;
+  background-size: cover;
+  overflow: hidden;
+  color: $brand-color-white;
+  &::before {
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.65)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0, 0, 0, 0.1) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+  .scroll-down {
+  	position: absolute;
+  	left: 50%;
+  	bottom: 11%;  	
+  	width: 35px;
+  	height: 35px;
+  	border-radius: 50%;
+  	background-color: #19bd9a;
+  }
+}
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    max-width: 1200px;
+    margin: 0 auto;
+    .logo {
+    	color: $brand-color-white;
+	    text-decoration: none;
+	    font-family: 'Big John';
+	    font-size: 1.5em;
+	    margin-left: 1em;
+	    margin-top: 5px;
+	    line-height: 0;
+	    z-index: 10;
+	}
+}
+nav{
+	z-index: 10;
+	ul {
+		list-style-type: none;
+	    display: flex;
+	    justify-content: space-between;
+	    min-width: 535px;
+	    li{
+	    	a{
+	    	padding: 4px 13px;
+		    border: 1px solid transparent;
+		    border-radius: 40px;	
+			cursor: pointer;
+
+	    	&:hover {
+	    	padding: 4px 13px;
+		    border: 1px solid $brand-color-white;
+		    border-radius: 40px;
+		    -webkit-transition: 2s;
+	    	-moz-transition: 2s;
+	    	-o-transition: 2s;
+	    	transition: 2s;	
+	    	}
+	    	}
+	    } 
+	}
+}
+
+.brand-text {
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	h1 {
+		font-family: $SourceSansPro;
+		text-transform: uppercase;
+		letter-spacing: 7px;
+    	font-size: 35px;
+	}
+	p {
+		margin-top: 40px;
+		letter-spacing: 1px;
+    	line-height: 32px;
+	}
+}
+
+
+.about-us {
+	height: 490px;
+	width: 75%;
+	background-color: $brand-color-white;
+	margin: 0 auto;
+	.about-us-photo {
+		width: 20%;
+	}
+}	
+	
+
+.about-us-text {
+	width: 55%;
+	margin-right: 80px;
+	h3 {
+		text-transform: uppercase;
+		font-family: $SourceSansPro;
+		margin-bottom: 20px;
+    	letter-spacing: 4px;
+	}
+	p {
+		color: $brand-color-grey;
+		margin-top: 40px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+	
+	button {
+		background-color: transparent;
+		padding: 10px 35px;
+    	margin-top: 20px;
+		border: 1px solid #000;
+		border-radius: 40px;
+	}
+}
+.about-us-details {
+	height: 620px;
+	background-color: $brand-background-grey;
+	position: relative;
+	.top-block {
+		width: 490px;
+		height: 260px;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 70px;
+		h2 {
+			font-family: $SourceSansPro;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+		}
+		p {
+			color: $brand-color-grey;
+			padding-top: 35px;
+		}
+	}
+}
+.icons-set {
+	width: 215px;
+	display: inline-flex;
+	justify-content: space-between;
+	padding-top: 50px;
+	a {
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		background-color: $brand-color-grey;
+		&:hover {
+			background-color: #19bd9a;
+		}
+}
+}
+.bottom-block {
+		padding-top: 30px;
+		display: inline-flex;
+		justify-content: space-between;
+		width: 960px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, 0);
+		.left-block {
+			width: 320px;
+			h3 {
+				letter-spacing: 3px;
+			}
+			p {
+				padding-top: 25px;
+				color: $brand-color-grey;
+				span {
+					color: #19bd9a;
+					font-weight: bold;
+				}
+			}
+		}
+		.right-block {
+			width: 540px;
+			padding-top: 45px;
+			p {
+				color: $brand-color-grey;
+				word-wrap: break-word;
+				span {
+					color: #19bd9a;
+					font-weight: bold;
+				}
+			}
+		}
+}
